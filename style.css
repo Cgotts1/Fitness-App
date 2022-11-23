@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+body{
+    border:solid;
+    background-image: url("https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    font-family: 'Lobster', cursive;
+}
+
+#program{
+display:inline-block;
+padding:20px;
+border:solid;
+background-color: black;
+color:white;
+opacity: 0.8;
+border-radius: 10px;
+
+
+}
+
+#profile{
+    float: right;
+    padding:20px;
+    border:solid;
+    background-color: black;
+color:white;
+opacity: 0.8;
+border-radius: 10px;
+/* background-image: url("https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); */
+/* background-size:cover; */
+
+
+
+}
+
+#date{
+    display:flex;
+    justify-content: center;
+    border:solid;
+    margin-top: 20px;
+    padding:20px;
+    background-color: black;
+color:white;
+opacity: 0.8;
+border-radius: 10px;
+font-size: larger;
+
+}
+
+#meal-container{
+border:solid;
+background-color: black;
+color:white;
+opacity: 0.8;
+margin-top: 20px;
+border-radius: 10px;
+
+}
+
+h2{
+    display:flex;
+    justify-content: center;
+    background-color: black;
+color:white;
+opacity: 0.8;
+border-bottom: solid 5px white;
+}
+
+#workout-container{
+    border:solid;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+    margin-top: 20px;
+border-radius: 10px;
+    }
+
+.muscle-group{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    /* background-image: url("https://images.unsplash.com/photo-1600677396439-fa707a38d570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fG11c2NsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); */
+background-position: center;
+background-size:cover;
+}
+
+.meal-group{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    /* background-image: url("https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFuY2FrZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"); */
+background-position: center;
+background-size:cover;
+}
+
+li{
+    list-style:circle;
+}
