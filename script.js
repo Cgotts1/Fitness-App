@@ -4,8 +4,6 @@ const profileEl = document.querySelector('#profile')
 
 
 
-
-
 //Sets current date 
 setInterval(function () {
     var time = moment().format("dddd, h:mm:ss a");
@@ -16,13 +14,13 @@ setInterval(function () {
 
   //Opens Program page
   const programPage = () =>{
-window.open("/program.html")
+window.location.replace("./program.html")                //window.open orpens a new page whereas window.location.replace is within the same tab
   }
   programEl.addEventListener("click", programPage)
 
 
 // Opens Profile page
   const profilePage = () =>{
-    window.open("/profile.html")
+    window.location.replace("./profile.html")
       }
       profileEl.addEventListener("click", profilePage)
