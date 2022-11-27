@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+/* Mainly for the homepage */
+
+body{
+    /* border:solid; */
+    background-image: url("https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    font-family: 'Lobster', cursive;
+    /* background-size:cover; */
+}
+
+
+
+li{
+    list-style:circle;
+}
+
+
+
+
+
+
+
+#homepage-btn{
+    display: inline-block;
+    /* justify-content: center; */
+    padding:20px;
+    border:solid white;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: 'Lobster', cursive;
+
+}
+
+/* Customize Page */
+
+.customizing{
+    border:solid;
+    background-color: black;
+    color:white; 
+    border-radius: 10px; 
+    opacity: 0.8;
+}
+
+#customize-title{
+    display:inline-block;
+    padding:18px;
+    margin-bottom: 15px;
+    border:solid white;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: 'Lobster', cursive;
+}
+
+#diet-title{
+    display:flex;
+    justify-content: center;
+}
+
+
+p{
+    display: inline-block;
+    border:solid white;
+    padding:5px;
+}
+
+textarea{
+    display: inline-block;
+    width: 50vh;
+}
+
+#icon-save{
+    display: inline-block;
+}
