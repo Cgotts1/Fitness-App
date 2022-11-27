@@ -5,7 +5,7 @@
 /* Mainly for the homepage */
 
 body{
-    border:solid;
+    /* border:solid; */
     background-image: url("https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
     font-family: 'Lobster', cursive;
     /* background-size:cover; */
@@ -104,6 +104,69 @@ li{
 
 
 
-.practice{
-    color:white;
+.program-page{
+    display:flex;
+    justify-content: center;
+padding:20px;
+border:solid;
+background-color: black;
+color:white;
+opacity: 0.8;
+border-radius: 10px;
 }
+
+.customize{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:solid;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+    margin-top: 20px;
+    font-size: 64px;
+    border-radius: 10px; 
+    height:50vw;
+}
+
+.generate{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:solid;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 64px;
+    height:50vw;
+}
+
+#homepage-btn{
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    margin-bottom: 15px;
+    border:solid white;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: 'Lobster', cursive;
+
+}
+
+/* Customize Page */
+
+.customizing{
+    display:flex;
+    flex-wrap: wrap;
+    border:solid;
+    background-color: black;
+    color:white; 
+    margin-top: 20px;  
+    border-radius: 10px; 
+    /* height:100vw; */
+}
+
