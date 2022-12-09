@@ -38,6 +38,7 @@ li{
 /* Customize Page */
 
 .customizing{
+    /* display:block; */
     border:solid;
     background-color: black;
     color:white; 
@@ -75,9 +76,15 @@ p{
 
 textarea{
     display: inline-block;
-    width: 50vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom:10px;
 }
 
 #icon-save{
     display: inline-block;
+}
+
+.weekdays{
+    margin:20px;
 }
