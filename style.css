@@ -64,7 +64,7 @@ background-position: center;
 }
 
 .meal-picture-one{
- background-image: url('https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFtYnVyZ2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'); 
+ background-image: url('https://source.unsplash.com/random/?food'); 
 width: 200px;
 height: 100px;
 /* opacity: 0.8; */
@@ -75,7 +75,7 @@ background-size: cover;
 }
 
 .workout-image{
-    background-image: url('https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-image: url('https://source.unsplash.com/random/?exercise');
     border-radius: 50%;
     height: 100px;
     width: 100px;
