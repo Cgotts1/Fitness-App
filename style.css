@@ -81,6 +81,7 @@ background-size: cover;
     width: 100px;
     background-position: center;
     background-size: cover;
+    box-shadow: 5px 5px 5px 5px;
 }
 
 #meal-container{
