@@ -15,7 +15,7 @@ let breakfastMeals = [
     drink: "Milk"
   },
   {
-    food: "Tacos",
+    food: "Chicken Tacos",
     drink: "Lemonade"
   },
   {
@@ -53,7 +53,7 @@ let dinnerMeals = [
     drink: "Milk"
   },
   {
-    food: "Tacos",
+    food: "Chicken Tacos",
     drink: "Lemonade"
   },
   {
@@ -77,18 +77,18 @@ setInterval(function () {
   }, 1000);
 
   
-if(moment().format("h:mm:ss a") >= '12:00:00 pm'){
+if(moment().format("h:mm:ss a") >= '12:00:00 pm' && moment().format("h:mm:ss a") <= '5:00:00 pm' ){
 mealGroup.innerHTML = `Lunch`
 meals.innerHTML = `
 <li>Chicken</li>
 <li>Rice</li>
 <li>Vegetables</li>
 `
-} else if (moment().format("h:mm:ss a") >= '5:00:00 pm'){
+} else if (moment().format("h:mm:ss a") >= '5:00:01 pm'){
   mealGroup.innerHTML = `Dinner`
 meals.innerHTML = `
-<li>Potatoes</li>
-<li>Spinach</li>
+<li>${dinnerMeals[1].food}</li>
+<li>${dinnerMeals[1].drink}</li>
 <li>Pickles</li>
 `
 } else if (moment().format("a") !== 'pm'){
