@@ -127,30 +127,30 @@ mealPictureOne.addEventListener('click', getRandomDinner())
 
 
 if (
-  moment().format("HH:mm") >= "12:00" &&
-  moment().format("HH:mm") <= "03:00"
+  moment().format("HH:mm") >= "00:00" &&
+  moment().format("HH:mm") <= "10:59"
 ) {
-  mealGroup.innerHTML = `Lunch`;
+  mealGroup.innerHTML = `Breakfast`;
   meals.innerHTML = `
   <li>Chicken</li>
   <li>Rice</li>
   <li>Vegetables</li>
   `;
-} else if (moment().format("HH:mm") >= "03:01") {
-  mealGroup.innerHTML = `Dinner`;
+} else if (moment().format("HH:mm") >= "11:00" &&
+moment().format("HH:mm") <= "15:59") {
+  mealGroup.innerHTML = `Lunch`;
   meals.innerHTML = `
   <li>${dinnerMeals[0].food}</li>
   <li>${dinnerMeals[0].drink}</li>
   <li>Pickles</li>
   `
-  
   ;
   mealPictureOne.style.backgroundImage = `url('https://source.unsplash.com/random/?${dinnerMeals[0].food}')`;
 
   mealCalories.textContent = `Meals | Total Calories: ${dinnerMeals[0].calories}`;
   foodDescription.innerHTML =  `<p>${dinnerMeals[0].description}</p>`
 } else {
-  mealGroup.innerHTML = `Breakfast`;
+  mealGroup.innerHTML = `Dinner`;
   meals.innerHTML = `
   <li>Waffles</li>
   <li>Milk</li>
