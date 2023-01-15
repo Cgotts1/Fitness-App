@@ -8,7 +8,7 @@ body{
     background-image: url("https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
     font-family: 'Lobster', cursive;
     margin: 0;
-    height: 100%;
+    height: 100vh;
 }
 
 #program{
@@ -95,8 +95,23 @@ color:white;
 opacity: 0.8;
 margin-top: 20px;
 border-radius: 10px;
-height:max-content;
+/* height:30vh; */
+}
 
+.meals{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.description{
+    background-color: white;
+    /* height: 10vh; */
+}
+
+.p-description{
+    color:black;
+    overflow: hidden;
 }
 
 h2{
@@ -115,7 +130,11 @@ border-bottom: solid 5px white;
     opacity: 0.8;
     margin-top: 20px;
 border-radius: 10px;
+/* height:30vh; */
     }
+
+
+
 
 .muscle-group{
     display: flex;
@@ -124,6 +143,13 @@ border-radius: 10px;
     /* background-image: url("https://images.unsplash.com/photo-1600677396439-fa707a38d570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fG11c2NsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); */
 background-position: center;
 background-size:cover;
+}
+
+
+.exercises{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .meal-group{
@@ -140,20 +166,12 @@ background-size:cover;
     justify-content: space-around;
 }
 
-.food-description{
-    display: inline-block;
-    background-color: white;
-    color: black;
-    z-index: 2;
-    width: 60%;
-    border-radius: 20px;
-    /* margin-bottom: 5px; */
-}
+
 
 li{
-    list-style:circle;
+    list-style:decimal;
     font-size: 20px;
-    width: 25%;
+    padding-right: 20px;
 }
 
 
@@ -225,7 +243,7 @@ border-radius: 10px;
 }
  
 li{
-    list-style:circle;
+    list-style:decimal;
 }
 
 #homepage-btn{

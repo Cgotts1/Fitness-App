@@ -9,21 +9,34 @@ const muscleGroup = document.querySelector(".muscle-group");
 const exercises = document.querySelector(".exercises");
 const mealPictureOne = document.querySelector(".meal-picture-one");
 const workoutImage = document.querySelector(".workout-image");
-const foodDescription = document.querySelector(".food-description")
+const foodDescription = document.querySelector(".food-description");
+const liEl = document.getElementsByTagName('li');
+
+console.log(liEl);
+
+
+
+
+function changeLiColor(){
+ 
+  this.liEl.style.backgroundColor = "blue";
+}
+
+liEl.addEventListener('click', changeLiColor())
 
 let breakfastMeals = [
   {
     food: "Pancakes",
-    drink: "Milk",
+    drink: "Fruit Juice",
     calories: 200,
   },
   {
-    food: "Chicken Tacos",
+    food: "Eggs",
     drink: "Lemonade",
     calories: 300,
   },
   {
-    food: "Taquitos",
+    food: "Fruit",
     drink: "Lasagna",
     calories: 100,
   },
@@ -62,10 +75,10 @@ let dinnerMeals = [
     food: "Tacos",
     drink: "Milk",
     calories: 230,
-    description: "A Yummy source of vitamin C"
+    description: "A Yummy source of vitamin C",
   },
   {
-    food: "women",
+    food: "Pizza",
     drink: "Lemonade",
     calories: 256,
   },
@@ -92,39 +105,15 @@ setInterval(function () {
   dateEl.textContent = time;
 }, 1000);
 
-// if(moment().format("h:mm:ss a") >= '12:00:00 pm' && moment().format("h:mm:ss a") <= '5:00:00 pm' ){
-// mealGroup.innerHTML = `Lunch`
-// meals.innerHTML = `
-// <li>Chicken</li>
-// <li>Rice</li>
-// <li>Vegetables</li>
-// `
-// } else if (moment().format("h:mm:ss a") >= '5:00:01 pm'){
-//   mealGroup.innerHTML = `Dinner`
-// meals.innerHTML = `
-// <li>${dinnerMeals[1].food}</li>
-// <li>${dinnerMeals[1].drink}</li>
-// <li>Pickles</li>
-// `
-// } else if (moment().format("a") !== 'pm'){
-//   mealGroup.innerHTML = `Breakfast`
-// meals.innerHTML = `
-// <li>Waffles</li>
-// <li>Milk</li>
-// <li>Oatmeal</li>
-// `
-// }
-
-let dinnerItem = dinnerMeals[Math.floor(Math.random()*dinnerMeals.length)];
 
 
-function getRandomDinner(){
+let dinnerItem = dinnerMeals[Math.floor(Math.random() * dinnerMeals.length)];
+
+function getRandomDinner() {
   return dinnerItem;
 }
 
-mealPictureOne.addEventListener('click', getRandomDinner())
-
-
+mealPictureOne.addEventListener("click", getRandomDinner());
 
 if (
   moment().format("HH:mm") >= "00:00" &&
@@ -132,67 +121,89 @@ if (
 ) {
   mealGroup.innerHTML = `Breakfast`;
   meals.innerHTML = `
-  <li>Chicken</li>
-  <li>Rice</li>
-  <li>Vegetables</li>
+  <li>${breakfastMeals[0].food}</li>
+  <li>${breakfastMeals[0].food}</li>
+  <li>${breakfastMeals[0].food}</li>
   `;
-} else if (moment().format("HH:mm") >= "11:00" &&
-moment().format("HH:mm") <= "15:59") {
+} else if (
+  moment().format("HH:mm") >= "11:00" &&
+  moment().format("HH:mm") <= "15:59"
+) {
   mealGroup.innerHTML = `Lunch`;
   meals.innerHTML = `
-  <li>${dinnerMeals[0].food}</li>
-  <li>${dinnerMeals[0].drink}</li>
-  <li>Pickles</li>
-  `
-  ;
+  <li>${lunchMeals[0].food}</li>
+  <li>${lunchMeals[0].drink}</li>
+  <li>${lunchMeals[1].food}</li>
+  `;
   mealPictureOne.style.backgroundImage = `url('https://source.unsplash.com/random/?${dinnerMeals[0].food}')`;
 
   mealCalories.textContent = `Meals | Total Calories: ${dinnerMeals[0].calories}`;
-  foodDescription.innerHTML =  `<p>${dinnerMeals[0].description}</p>`
+  foodDescription.innerHTML = `<p>${dinnerMeals[0].description}</p>`;
 } else {
   mealGroup.innerHTML = `Dinner`;
   meals.innerHTML = `
-  <li>Waffles</li>
-  <li>Milk</li>
-  <li>Oatmeal</li>
-  `
-
-  ;
+  <li>${dinnerMeals[0].food}</li>
+  <li>${dinnerMeals[0].drink}</li>
+  <li>${dinnerMeals[0].food}</li>
+  `;
 }
 
 if (moment().format("dddd") === "Monday") {
   muscleGroup.innerHTML = `Chest`;
-  exercises.innerHTML = `<li>Bicep Curls</li>
-    <li>Tricep Rings</li>
-    <li>Plank</li>`;
+  exercises.innerHTML = `<li>Bench Press</li>
+    <li>Push Ups</li>
+    <li>Pull Downs</li>
+    <li>Pull Ups</li>
+    <li>Bent-over Rows</li>
+
+    <li>Fly</li>`;
 } else if (moment().format("dddd") === "Tuesday") {
   muscleGroup.innerHTML = `Legs`;
-  exercises.innerHTML = `<li>Bicep Curls</li>
-    <li>Tricep Rings</li>
-    <li>Plank</li>`;
+  exercises.innerHTML = `<li>Squats</li>
+    <li>Lunges</li>
+    <li>Calf Raises</li>
+    <li>Leg Press</li>
+    <li>Push Ups</li>
+    
+    `;
 } else if (moment().format("dddd") === "Wednesday") {
   muscleGroup.innerHTML = `Arms`;
-  exercises.innerHTML = `<li>Bicep Curls</li>
-    <li>Tricep Rings</li>
+  exercises.innerHTML = `<li>Standing Bicep Curls</li>
+    <li>Bench Tricep</li>
+    <li>Preacher Curls</li>
+    <li>Tricep</li>
     <li>Plank</li>`;
 } else if (moment().format("dddd") === "Thursday") {
-  muscleGroup.innerHTML = `Back`;
-  exercises.innerHTML = `<li>Bicep Curls</li>
-    <li>Tricep Rings</li>
-    <li>Plank</li>`;
+  muscleGroup.innerHTML = `Legs`;
+  exercises.innerHTML = `<li>Squats</li>
+  <li>Lunges</li>
+  <li>Calf Raises</li>
+  <li>Leg Press</li>`;
 } else if (moment().format("dddd") === "Friday") {
-  muscleGroup.innerHTML = `Quads`;
-  exercises.innerHTML = `<li>Bicep Curls</li>
-    <li>Tricep Rings</li>
-    <li>Plank</li>`;
+  muscleGroup.innerHTML = `Chest`;
+  exercises.innerHTML = `<li>Bench Press</li>
+  <li>Push Ups</li>
+  <li>Pull Downs</li>
+  <li>Pull Ups</li>
+  <li>Bent-over Rows</li>
+  <li>Fly</li>`;
 } else if (moment().format("dddd") === "Saturday") {
-  muscleGroup.innerHTML = `Forearm`;
-  exercises.innerHTML = `<li>Bicep Curls</li>
-    <li>Tricep Rings</li>
-    <li>Plank</li>`;
+  muscleGroup.innerHTML = `Legs`;
+  exercises.innerHTML = `<li>Squats</li>
+  <li>Lunges</li>
+  <li>Calf Raises</li>
+  <li>Leg Press</li>`;
 } else if (moment().format("dddd") === "Sunday") {
-  muscleGroup.innerHTML = `Calves`;
-  exercises.innerHTML = `<li>Bicep Curls</li>
-    <li>Tricep Rings</li>
-    <li>Plank</li>`;
+  muscleGroup.innerHTML = `Arms/Chest`;
+  exercises.innerHTML = `<li>Standing Bicep Curls</li>
+  <li>Bench Tricep</li>
+  <li>Preacher Curls</li>
+  <li>Tricep</li>
+  <li>Plank</li>
+  <li>Bench Press</li>
+  <li>Push Ups</li>
+  <li>Pull Downs</li>
+  <li>Pull Ups</li>
+  <li>Bent-over Rows</li>
+  <li>Fly</li>`;
 }
